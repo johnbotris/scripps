@@ -7,7 +7,7 @@
 mount /dev/nvme0n1p3 /mnt \
     && mount /dev/nvme0n1p1 /mnt/boot \
     && swapon /dev/nvme0n1p2 \
-    && cryptsetup open /dev/sda5 home-john
-    && mount /dev/mapper/home-john /mnt/home
+    && cryptsetup open /dev/sda5 home-john \
+    && mount /dev/mapper/home-john /mnt/home \
     && arch-chroot /mnt
 
